@@ -1,12 +1,19 @@
 @namespace html url("http://www.w3.org/1999/xhtml");
 
-/* personal site customizations */
+/* personal site customizations
+   remove this block 
+   vvvvvvvvvvvv
+*/
 @-moz-document url-prefix("https://www.google.com/search"), url-prefix("https://www.google.com.br/search"), url-prefix("https://www.google.com.ar/search"),domain(reddit.com), domain(aha-music.com)  {
 	body,#appbar {
 		background-color: #eee !important;
 	}
 }
 
+/* ^^^^^^^^^^^^
+	personal site customizations
+	remove the above block
+*/
 
 /* https://github.com/leadweedy/Firefox-Proton-Square/blob/main/userContent.css */
 @-moz-document url(about:home), url(about:newtab) {body .search-handoff-button{border-radius: 0px !important;}}
