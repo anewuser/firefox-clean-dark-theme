@@ -1,14 +1,12 @@
 @namespace html url("http://www.w3.org/1999/xhtml");
 
-
 /* https://github.com/leadweedy/Firefox-Proton-Square/blob/main/userContent.css */
 @-moz-document url(about:home), url(about:newtab) {body .search-handoff-button{border-radius: 0px !important;}}
 
 
 @-moz-document url(chrome://browser/content/places/places.xhtml) {
 
-
-	/* library context menu */
+	/* removes "Open..." options from the library context menu */
 	menuitem[label*="Open"],menuseparator[id*="placesContext_open"]{display: none !important;}
 
 
