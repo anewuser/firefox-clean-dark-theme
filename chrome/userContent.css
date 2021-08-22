@@ -1,4 +1,4 @@
-@namespace html url("http://www.w3.org/1999/xhtml") !important;
+@namespace html url("http://www.w3.org/1999/xhtml");
 
 @-moz-document url(chrome://browser/content/places/places.xhtml) {
 	
