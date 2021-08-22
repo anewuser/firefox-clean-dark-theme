@@ -1,33 +1,33 @@
-@namespace html url("http://www.w3.org/1999/xhtml");
-
-/* https://github.com/leadweedy/Firefox-Proton-Square/blob/main/userContent.css */
-@-moz-document url(about:home), url(about:newtab) {body .search-handoff-button{border-radius: 0px !important;}}
-
+@namespace html url("http://www.w3.org/1999/xhtml") !important;
 
 @-moz-document url(chrome://browser/content/places/places.xhtml) {
-
-	/* removes "Open..." options from the library context menu */
-	menuitem[label*="Open"],menuseparator[id*="placesContext_open"]{display: none !important;}
-
-
-	/* 	
-	https://old.reddit.com/r/FirefoxCSS/comments/dxj7z8/how_to_change_the_colors_in_library
 	
-	library customization - change colors here 
+	/* removes "Open..." options from the library context menu */
+	menuitem[label*="Open"],menuseparator[id*="placesContext_open"]{display: none  !important;}
+    
+	/* library colors
+		reference: https://github.com/mozilla/gecko-dev/blob/master/browser/themes/windows/places/organizer.css
 	*/
-	:root { --background: #1E201C; }
-	:root { --odd-bg-row: #242622; }
-	:root { --textcolor: #F47E46; }
-	:root { --iconcolor: #F3F3F3; }
-	:root { --selected-iconcolor: #F3F3F3; }
-	:root { --hover-iconcolor: #F3F3F3; }
-	:root { --bordercolor: #000; }
-	:root { --hover-bg-row: #1E201C; }
-	:root { --hover-text-row: #F47E46; }
-	:root { --selected-bg-row: #A8A097; }
-	:root { --selected-text-row: #000; }
+	:root {
+      --organizer-color: #ccc !important;
+      --organizer-selected-color: #000 !important;
+      --organizer-deemphasized-color: rgb(191,191,201) !important;
 
-	window#places[title="Library"]{background-color:var(--background)!important;font-size:13px!important}:-moz-any(#bookmarks-view,#historyTree,#editBMPanel_folderTree,#placesList,#placeContent) treechildren::-moz-tree-row{margin-top:5px!important;min-height:20px!important;height:20px!important}#placesMenu>menu{border:none!important}#placesMenu>menu:hover{-moz-appearance:none!important;background-color:var(--hover-bg-row)!important}#placesMenu>menu[open]{-moz-appearance:none!important;background-color:var(--hover-bg-row)!important;border:1px dotted var(--textcolor)!important}#placesMenu menupopup{-moz-appearance:none!important;background-color:var(--background)!important;color:var(--textcolor)!important;fill:var(--iconcolor)!important;border:1px solid var(--bordercolor)!important;-moz-appearance:none!important;background-color:var(--background)!important;color:var(--textcolor)!important;fill:var(--iconcolor)!important;border:1px solid var(--bordercolor)!important}#placesToolbar{background-color:var(--background)!important}#placesToolbar>toolbarbutton[disabled]>.toolbarbutton-icon{opacity:.45!important}#placesToolbar>#back-button>.toolbarbutton-icon,#placesToolbar>#forward-button>.toolbarbutton-icon{fill:var(--iconcolor)!important}#placesMenu>menu>.menubar-text{color:var(--textcolor)!important}#placesMenu menupopup menuitem[disabled]{color:var(--textcolor)!important;opacity:.45!important}#placesMenu menupopup menuseparator{display:none!important}#downloadsRichListBox{background-color:var(--background)!important;border-bottom:1px dotted var(--bordercolor)!important;color:var(--textcolor)!important}#placesView,#placesView .scrollbox-innerbox,#infoPane,#placesList,#placeContent{-moz-appearance:none!important;background-color:var(--background)!important;color:var(--textcolor)!important}#placeContent treecol{-moz-appearance:none!important;background-color:var(--background)!important;padding:3px!important;color:var(--textcolor)!important;border-top:1px dotted var(--bordercolor)!important;border-right:1px dotted var(--bordercolor)!important;border-bottom:1px dotted var(--bordercolor)!important}#placeContent treecol:hover{-moz-appearance:none!important;background-color:var(--hoverBGcolor)!important;color:var(--hover-text-row)!important}#placesView>splitter{border-inline-end:1px dotted var(--bordercolor)!important}#placesList{border-top:1px dotted var(--bordercolor)!important;border-bottom:1px dotted var(--bordercolor)!important}#placeContent treechildren::-moz-tree-cell-text(hover){color:var(--hover-text-row)!important}#placeContent treechildren::-moz-tree-cell-text(selected){color:var(--selected-text-row)!important}#placeContent treechildren::-moz-tree-row{background-color:var(--background)!important}#placeContent treechildren::-moz-tree-row(odd){background-color:var(--odd-bg-row)!important}#placesView treechildren::-moz-tree-row(hover){background-color:var(--hover-bg-row)!important}#placesView treechildren::-moz-tree-row(selected){background-color:var(--selected-bg-row)!important}#placesView treechildren::-moz-tree-image{fill:var(--iconcolor)!important}#placesView treechildren::-moz-tree-image(title hover){fill:var(--hover-iconcolor)!important}#placesView treechildren::-moz-tree-image(title selected){fill:var(--selected-iconcolor)!important}#placesView treechildren::-moz-tree-image(container selected){fill:var(--selected-iconcolor)!important}#placesList treechildren::-moz-tree-image{fill:var(--iconcolor)!important}#placesList treechildren::-moz-tree-image(title hover){fill:var(--hover-iconcolor)!important}#placesList treechildren::-moz-tree-image(container hover){fill:var(--hover-iconcolor)!important}#placesList treechildren::-moz-tree-image(title selected){fill:var(--selected-iconcolor)!important}#placesList treechildren::-moz-tree-image(container selected){fill:var(--selected-iconcolor)!important}#placesList treechildren::-moz-tree-row(hover){background-color:var(--hover-bg-row)!important}#placesList treechildren::-moz-tree-row(selected){background-color:var(--selected-bg-row)!important}#placesList treechildren::-moz-tree-cell-text(hover){color:var(--hover-text-row)!important}#placesList treechildren::-moz-tree-cell-text(selected){color:var(--selected-text-row)!important}#searchFilter{-moz-appearance:none!important;background-color:transparent!important;border:1px dotted var(--bordercolor)!important;color:var(--textcolor)!important}#searchFilter[focused]{box-shadow:var(--input-field-focus-shadow)!important;background-color:var(--background)!important;color:var(--textcolor)!important}#clearDownloadsButton{color:var(--textcolor)!important}#clearDownloadsButton[disabled]{opacity:.5!important}#detailsDeck{background-color:var(--background)!important;color:var(--textcolor)!important;border-top:1px solid var(--bordercolor)!important}#infoBox textbox,#infoBox listbox,#editBMPanel_namePicker,#editBMPanel_tagsField,#editBMPanel_tagsSelector,#editBMPanel_keywordField,#editBMPanel_locationField{-moz-appearance:none!important;border:1px dotted var(--bordercolor)!important;background-color:var(--background)!important;color:var(--textcolor)!important}
+      --organizer-toolbar-background: rgb(31, 35, 42) !important;
+      --organizer-pane-background: rgb(31, 35, 42) !important;
+      --organizer-content-background: rgb(37, 42, 51) !important;
+
+      --organizer-hover-background: rgba(136, 136, 139, 0.067) !important;
+      --organizer-selected-background: #83bafc !important;
+      --organizer-outline-color: rgb(0,221,255) !important;
+      
+      --organizer-border-color: rgba(249,249,250,.1) !important;
+
+      --organizer-toolbar-field-background: rgb(28,27,34) !important;
+      --organizer-toolbar-field-background-focused: rgb(66,65,77) !important;
+      scrollbar-color: rgba(249,249,250,.4) rgba(20,20,25,.3) !important;
+    }
+
+	 tree {font:normal 540 14px "Segoe UI", sans-serif !important;}
 	
 }
-
