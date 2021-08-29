@@ -1,0 +1,11 @@
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+@-moz-document url(about:addons) {
+	
+	:root {
+		--addon-icon-size:20px !important;
+	}
+	
+	.addon-description{display:none !important;}
+	
+}
