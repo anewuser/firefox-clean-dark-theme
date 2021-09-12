@@ -1,5 +1,4 @@
-![screencast](https://user-images.githubusercontent.com/6733770/132977911-9b2c16cd-67de-4312-8e74-820fc7b97224.gif)
-
+![screencast](https://user-images.githubusercontent.com/6733770/132978248-28c5b6ef-ca31-4d98-83d0-34fb7042db57.gif)
 
 ----
 
