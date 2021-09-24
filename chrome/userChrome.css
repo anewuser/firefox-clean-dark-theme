@@ -1,11 +1,11 @@
 @import 'context_menu.css';
 
 /* dropdown menu with tab list */ 
-#alltabs-button{display: none;}
+#alltabs-button,
 /* bookmark popup thumbnail */ 
-#editBookmarkPanelImage, #editBookmarkPanelFaviconContainer,#editBookmarkSeparator {display: none !important;}
+#editBookmarkPanelImage, #editBookmarkPanelFaviconContainer,#editBookmarkSeparator,
 /* "search with" or "visit" */
-#urlbar[usertyping] .urlbarView-row:not([type]):first-child, #urlbar[usertyping] .urlbarView-row[type="search"]:first-child{display: none;}
+.urlbarView-row:first-of-type{display: none !important;}
 
 /* reverts the tab throbber (loading icon) */ 
 .tab-throbber[busy]{background-image:url(chrome://global/skin/icons/loading.png)!important;animation:unset!important}.tab-throbber[busy]:not([progress]){filter:grayscale(100%)}@media (min-resolution: 2dppx){.tab-throbber[busy]{background-image:url(chrome://global/skin/icons/loading@2x.png)!important}}
