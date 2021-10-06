@@ -21,6 +21,7 @@ Some of my other `about:config` settings:
 | ----------- | ----------- |
 | browser.compactmode.show   | true |
 | browser.menu.showViewImageInfo   | true |
+| browser.uidensity | 1 |
 | browser.urlbar.trimURLs  | false |
 | extensions.pocket.enabled   | false |
 | extensions.screenshots.disabled   | true |
