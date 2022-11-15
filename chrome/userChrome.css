@@ -23,10 +23,12 @@
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
   margin-top: calc(var(--tab-min-height) - 3px) !important;
 }
-
 .tabbrowser-tab[usercontextid]:is([selected=true], [visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background > .tab-context-line {
   margin-top: calc(var(--tab-min-height) - 3px) !important;
 }
+
+/* "Always Open Similar Files" in the download panel */
+#downloadsContextMenu .downloadAlwaysOpenSimilarFilesMenuItem{display:none!important;}
 
 
 /*
