@@ -13,19 +13,11 @@
 .tab-throbber[busy]::before{background-image:none!important;animation:unset!important}@media (min-resolution: 2dppx){.tab-throbber[busy]::before{background-image:none!important}}
 
 /* highlights the top of active tabs */
-.tabbrowser-tab:not([selected="true"]) {padding-top: 1px !important;}
-.tab-background:is([selected],[multiselected]) {
-  box-shadow: inset 0 1px #0a84ff !important;
-  border: 0 !important;
-}
+.tab-background:is([selected],[multiselected]){box-shadow: inset 0 2px #0a84ff !important;border: 0 !important;outline: none !important;}
 
 /* brings container indicators back to the bottom */
-.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  margin-top: calc(var(--tab-min-height) - 3px) !important;
-}
-.tabbrowser-tab[usercontextid]:is([selected=true], [visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background > .tab-context-line {
-  margin-top: calc(var(--tab-min-height) - 3px) !important;
-}
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line{margin-top: calc(var(--tab-min-height) - 3px) !important;}
+.tabbrowser-tab[usercontextid]:is([selected=true], [visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background > .tab-context-line{margin-top: calc(var(--tab-min-height) - 3px) !important;}
 
 /* "Always Open Similar Files" in the download panel */
 #downloadsContextMenu .downloadAlwaysOpenSimilarFilesMenuItem{display:none!important;}
