@@ -2,7 +2,7 @@
 	uncluttered context menu 
 
 main menu fix */
-#appmenu-moreTools{max-height: unset !important;}
+#appmenu-moreTools{max-height:unset!important;}
 /* main menu */
 #appMenu-multiView vbox>toolbarseparator,
 #appMenu-new-tab-button2,#appMenu-new-window-button2,#appMenu-new-private-window-button2,
@@ -14,7 +14,10 @@ main menu fix */
 #tabContextMenu>menuseparator,
 #context_openANewTab,#context_reloadTab,#context_toggleMuteTab,
 #context_bookmarkTab,#context_moveTabOptions,.share-tab-url-item,#context_selectAllTabs,
-#context_closeTab,#closeTabOptions menuitem[disabled="true"],#context_undoCloseTab,
+#context_closeTab,#context_closeTabOptions[disabled="true"],#context_closeTabsToTheStart,#closeTabOptions menuitem[disabled="true"],#context_undoCloseTab,
+/* tabs toolbar */
+#toolbar-context-openANewTab,#toolbarNavigatorItemsMenuSeparator,
+#toolbar-context-reloadSelectedTab,#toolbar-context-bookmarkSelectedTab,#toolbar-context-selectAllTabs,#toolbar-context-undoCloseTab,#toolbarItemsMenuSeparator,
 /* address bar */
 .context-menu-add-engine,
 /* "Always Open Similar Files" in the download panel */
