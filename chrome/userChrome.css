@@ -7,20 +7,22 @@
 /* bookmark popup thumbnail */ 
 #editBookmarkPanelFaviconContainer,#editBookmarkPanelImage,#editBookmarkSeparator,
 /* "Search with" or "Visit" */
-.urlbarView-row:first-of-type{display:none!important;}
+.urlbarView-row:first-of-type{display:none!important}
 
 /* display the loading icon when ui.prefersReducedMotion=0 */ 
-.tab-throbber[busy]{background-image:url(chrome://global/skin/icons/loading.png)!important;animation:unset!important}.tab-throbber[busy]:not([progress]){filter:grayscale(100%)}@media (min-resolution: 2dppx){.tab-throbber[busy]{background-image:url(chrome://global/skin/icons/loading@2x.png)!important}}
+.tab-throbber[busy]{background-image:url(chrome://global/skin/icons/loading.png)!important}
+.tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
+
+/* proper tabs */
+.tabbrowser-tab{padding-inline:0!important}
+.tab-background,.tab-content,.tab-stack{border-radius: 1px 1px 0 0 !important;margin-top:0!important;margin-bottom:0!important}
 
 /* highlight the top of active tabs */
-.tab-background:is([selected],[multiselected]){box-shadow:inset 0 2px #0a84ff!important;border:0!important;outline:none!important;}
+.tab-background:is([selected],[multiselected]){box-shadow:inset 0 2px #0a84ff!important}
 
 /* container indicators at the bottom */
-.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line{margin-top:calc(var(--tab-min-height) - 3px)!important;}
-.tabbrowser-tab[usercontextid]:is([selected=true],[visuallyselected="true"],[multiselected])>.tab-stack>.tab-background>.tab-context-line{margin-top:calc(var(--tab-min-height) - 3px)!important;}
+.tabbrowser-tab[usercontextid] .tab-context-line{margin-top:calc(var(--tab-min-height) - 1px)!important}
 
-/* square tabs from https://github.com/leadweedy/Firefox-Proton-Square/ */
-.tab-background,.tab-content,.tab-stack{margin-top:0!important;margin-bottom:0!important}#TabsToolbar{height:33px!important}:root{--tab-min-height:33px!important;--arrowpanel-menuitem-padding:6px 8px!important;--arrowpanel-menuitem-margin:0 4px!important;--panel-subview-body-padding:4px 0!important}.tab-background{border-radius:0!important}.tabbrowser-tab{padding-inline:0!important}#nav-bar{height:35px!important}
-
-/* tab dividers/separators based on https://github.com/black7375/Firefox-UI-Fix */
-.tab-background::after,.tab-background::before{display:block;position:absolute;top:50%;transform:translateY(-50%);width:0;height:100%;border-right:1px solid #535354}.tab-background::after{right:0;content:""}.tabbrowser-tab[beforeselected-visible] .tab-background::after,.tabbrowser-tab[first-visible-tab=true] .tab-background::before,.tabbrowser-tab[last-visible-tab=true] .tab-background::after,.tabbrowser-tab[visuallyselected] .tab-background::after,.tabbrowser-tab[visuallyselected] .tab-background::before{opacity:0}
+/* tab dividers/separators */
+.tabbrowser-tab:not([beforeselected-visible],[visuallyselected],[last-visible-tab]) .tab-background:after{border-right:1px solid #535354;height:100%;position:absolute}
+.tab-background:after{content:"";right:0}
