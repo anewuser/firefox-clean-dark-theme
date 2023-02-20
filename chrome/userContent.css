@@ -1,20 +1,18 @@
-@namespace html url("http://www.w3.org/1999/xhtml");
-
 /* compact about:addons */	
 @-moz-document url(about:addons) {
 	
-	:root {--addon-icon-size:20px !important;}
-	.addon-description{display:none !important;}
+	:root{--addon-icon-size:20px!important}
+	.addon-description{display:none!important}
 	
 }
 
 /* Library in a tab */	
 @-moz-document url(chrome://browser/content/places/places.xhtml) {
 	
-	tree {font:normal 540 14px "Segoe UI", sans-serif !important;}
+	tree {font:normal 540 14px "Segoe UI", sans-serif !important}
 
 	/* removes "Open..." options from the context menu */
-	menuitem[label*="Open"],menuseparator[id*="placesContext_open"]{display:none!important;}
+	menuitem[label*="Open"],menuseparator[id*="placesContext_open"]{display:none!important}
     
 	/* colors (reference: https://github.com/mozilla/gecko-dev/blob/master/browser/themes/windows/places/organizer.css) */
 	:root {
@@ -30,7 +28,7 @@
 		--organizer-border-color: rgba(249,249,250,.1) !important;
 		--organizer-toolbar-field-background: rgb(28,27,34) !important;
 		--organizer-toolbar-field-background-focused: rgb(66,65,77) !important;
-		scrollbar-color: rgba(249,249,250,.4) rgba(20,20,25,.3) !important;
+		scrollbar-color: rgba(249,249,250,.4) rgba(20,20,25,.3) !important
     }
 	
 }

@@ -9,13 +9,13 @@
 /* "Search with" or "Visit" */
 .urlbarView-row:first-of-type{display:none!important}
 
-/* display the loading icon when ui.prefersReducedMotion=0 */ 
+/* old loading icon */ 
 .tab-throbber[busy]{background-image:url(chrome://global/skin/icons/loading.png)!important}
 .tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
 
 /* proper tabs */
 .tabbrowser-tab{padding-inline:0!important}
-.tab-background,.tab-content,.tab-stack{border-radius: 1px 1px 0 0 !important;margin-top:0!important;margin-bottom:0!important}
+.tab-background{border-radius: 1px 1px 0 0 !important;margin-top:0!important;margin-bottom:0!important}
 
 /* highlight the top of active tabs */
 .tab-background:is([selected],[multiselected]){box-shadow:inset 0 2px #0a84ff!important}
@@ -24,5 +24,4 @@
 .tabbrowser-tab[usercontextid] .tab-context-line{margin-top:calc(var(--tab-min-height) - 1px)!important}
 
 /* tab dividers/separators */
-.tabbrowser-tab:not([beforeselected-visible],[visuallyselected],[last-visible-tab]) .tab-background:after{border-right:1px solid #535354;height:100%;position:absolute}
-.tab-background:after{content:"";right:0}
+.tabbrowser-tab:not([visuallyselected],[multiselected]) + .tabbrowser-tab:not([visuallyselected],[multiselected]) .tab-background{border-left:1px solid #444445;height:100%;position:absolute}
