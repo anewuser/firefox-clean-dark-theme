@@ -1,7 +1,7 @@
 @import 'context_menu.css';
+@import 'extensions_button.css';
 
-/* tab close button */
-.tabbrowser-tab .tab-close-button,
+.tab-close-button,
 /* "List all tabs" button */ 
 #alltabs-button,
 /* bookmark popup thumbnail */ 

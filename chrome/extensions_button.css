@@ -1,0 +1,24 @@
+/* use the overflow menu icon */
+#unified-extensions-button{list-style-image:url(chrome://global/skin/icons/chevron.svg)!important}
+
+/* resize extension icons */
+#unified-extensions-panel image{height:16px!important;width:16px!important}
+
+
+#unified-extensions-panel panelmultiview{padding:2px}
+
+#unified-extensions-panel .panel-header,
+#unified-extensions-panel toolbarseparator,
+/* labels */
+#unified-extensions-panel toolbaritem .unified-extensions-item-message-deck,
+/* gear icons */
+#unified-extensions-panel toolbarbutton:nth-child(2),
+/* hide specific extensions with toolbar buttons */
+#unified-extensions-panel toolbaritem[label="h264ify"],
+#unified-extensions-panel toolbaritem[label="Historia"],
+/* hide specific extensions with no toolbar buttons */
+#unified-extensions-panel unified-extensions-item[extension-id="{b144be59-6bdc-41e0-9141-9f8d00373d93}"],
+/* "Manage extensions" */
+#unified-extensions-panel #unified-extensions-manage-extensions{
+	display:none!important
+}
