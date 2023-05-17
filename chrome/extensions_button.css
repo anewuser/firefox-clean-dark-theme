@@ -17,6 +17,7 @@
 #unified-extensions-panel toolbaritem[label="Historia"],
 /* hide specific extensions with no toolbar buttons */
 #unified-extensions-panel unified-extensions-item[extension-id="{b144be59-6bdc-41e0-9141-9f8d00373d93}"]/*Copy Link Text*/,
+#unified-extensions-panel unified-extensions-item[extension-id="copy-markdown-link@ianbicking.org"],
 /* "Manage extensions" */
 #unified-extensions-panel #unified-extensions-manage-extensions{
 	display:none!important

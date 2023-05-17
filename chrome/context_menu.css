@@ -36,6 +36,8 @@ main menu fix */
 #context-media-play,#context-media-mute,#context-media-playbackrate,#context-media-loop,#context-media-eme-separator,#context-video-fullscreen,#context-sendvideo,
 /* textboxes */
 .textbox-contextmenu menuseparator,menuitem[label="Undo"],menuitem[label="Redo"],#context-sep-redo,menuitem[label="Delete"],menuitem[label="Select All"],
+/* https://addons.mozilla.org/addon/copy-markdown-link/ */
+menuitem[label="Copy Markdown link"],
 /* https://addons.mozilla.org/addon/undo-close-tab-button/ */
 menu[label="Undo Close Tab Button"],
 /* https://addons.mozilla.org/addon/order-tabs-by-domain/ */
