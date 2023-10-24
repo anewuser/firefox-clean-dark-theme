@@ -24,5 +24,5 @@
 .tabbrowser-tab[usercontextid] .tab-context-line{margin-top:calc(var(--tab-min-height) - 1px)!important}
 
 /* tab dividers/separators */
-.tabbrowser-tab:not([visuallyselected],[multiselected]) + .tabbrowser-tab:not([visuallyselected],[multiselected]) .tab-background:after{border-left:1px solid #444445;height:100%;position:absolute}
+.tabbrowser-tab:not([selected],[multiselected]) + .tabbrowser-tab:not([selected],[multiselected]) .tab-background:after{border-left:1px solid #444445;height:100%;position:absolute}
 .tab-background:after{content:"";left:0}
