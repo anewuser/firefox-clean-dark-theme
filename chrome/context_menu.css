@@ -38,9 +38,12 @@ main menu fix */
 .textbox-contextmenu menuseparator,menuitem[label="Undo"],menuitem[label="Redo"],#context-sep-redo,menuitem[label="Delete"],menuitem[label="Select All"],
 /* https://addons.mozilla.org/addon/copy-markdown-link/ */
 menuitem[label="Copy Markdown link"],
-/* https://addons.mozilla.org/addon/undo-close-tab-button/ */
-menu[label="Undo Close Tab Button"],
 /* https://addons.mozilla.org/addon/order-tabs-by-domain/ */
-menu[label="Group Tabs to Window"],menuitem[label="Group Tabs to Window"]{
+menu[label="Group Tabs to Window"],menuitem[label="Group Tabs to Window"],
+/* https://addons.mozilla.org/addon/open-in-temp-container/ */
+#tabContextMenu menuitem[label="Open in Temp Container"], #contentAreaContextMenu menuitem[label="View Page Source"]:not([hidden="true"])~menuitem[label="Open in Temp Container"]{
 	display:none!important;
 }
+
+/* https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
+#contentAreaContextMenu menuitem[label="Open in Temp Container"]{order: 99 !important;}
