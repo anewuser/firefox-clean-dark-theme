@@ -3,6 +3,20 @@
 
 main menu fix */
 #appmenu-moreTools{max-height:unset!important;}
+
+/* truncate "Copy Link Without Tracking" to "Copy Link" */
+#context-stripOnShareLink label[crop]:before{max-width: 9ch;text-overflow:clip!important;}
+#strip-on-share label[crop]:before{max-width: 5ch;text-overflow:clip!important;}
+/* hide the original "Copy Link" items 
+layout.css.has-selector.enabled needs to be manually set to "true" on about:config
+https://bugzilla.mozilla.org/show_bug.cgi?id=418039
+*/
+#context-copylink,menuitem[label="Copy"]:has(+#strip-on-share){display:none!important}
+
+/* keep  this item at the bottom
+https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
+#contentAreaContextMenu menuitem[label="Open in Temp Container"]{order:99!important;}
+
 /* main menu */
 #appMenu-multiView vbox>toolbarseparator,
 #appMenu-new-tab-button2,#appMenu-new-window-button2,#appMenu-new-private-window-button2,
@@ -23,12 +37,18 @@ main menu fix */
 /* "Always Open Similar Files" in the download panel */
 .downloadAlwaysOpenSimilarFilesMenuItem,
 /* page context menu */
+#frame menuseparator,
 #context-navigation,#context-sep-navigation,
 #context-openlinkintab,#context-openlink,#context-openlinkprivate,
 #context-savepage,
 #context-selectall,#context-print-selection,#context-sep-selectall,
 #context-searchselect,
 #frame-sep,
+/* frame context menu */
+#context-openframe,
+#context-bookmarkframe,#context-saveframe,
+#context-printframe,
+#context-viewframesource,#context-viewframeinfo,
 /* "Add a keyword..." */
 #context-keywordfield,
 /* media */
@@ -44,6 +64,3 @@ menu[label="Group Tabs to Window"],menuitem[label="Group Tabs to Window"],
 #tabContextMenu menuitem[label="Open in Temp Container"], #contentAreaContextMenu menuitem[label="View Page Source"]:not([hidden="true"])~menuitem[label="Open in Temp Container"]{
 	display:none!important;
 }
-
-/* https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
-#contentAreaContextMenu menuitem[label="Open in Temp Container"]{order: 99 !important;}
