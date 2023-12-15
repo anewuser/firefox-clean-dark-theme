@@ -7,7 +7,9 @@
 /* bookmark popup thumbnail */ 
 #editBookmarkPanelFaviconContainer,#editBookmarkPanelImage,#editBookmarkSeparator,
 /* "Search with" or "Visit" */
-.urlbarView-row:first-of-type{display:none!important}
+.urlbarView-row:first-of-type,
+/* result menu */
+.urlbarView-button{display:none!important}
 
 /* old loading icon */ 
 .tab-throbber[busy]{background-image:url(chrome://global/skin/icons/loading.png)!important}
