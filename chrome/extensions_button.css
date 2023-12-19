@@ -12,8 +12,7 @@
 #unified-extensions-panel toolbaritem .unified-extensions-item-message-deck,
 /* gear icons */
 #unified-extensions-panel toolbarbutton:nth-child(2),
-/* hide specific extensions with toolbar buttons */
-#unified-extensions-panel toolbaritem[label="h264ify"],
+/* hide specific extension(s) with toolbar buttons */
 #unified-extensions-panel toolbaritem[label="Historia"],
 /* hide specific extensions with no toolbar buttons */
 #unified-extensions-panel unified-extensions-item[extension-id="{b144be59-6bdc-41e0-9141-9f8d00373d93}"]/*Copy Link Text*/,
