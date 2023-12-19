@@ -7,10 +7,7 @@ main menu fix */
 /* truncate "Copy Link Without Tracking" to "Copy Link" */
 #context-stripOnShareLink label[crop]:before{max-width: 9ch;text-overflow:clip!important;}
 #strip-on-share label[crop]:before{max-width: 5ch;text-overflow:clip!important;}
-/* hide the original "Copy Link" items 
-layout.css.has-selector.enabled needs to be manually set to "true" on about:config
-https://bugzilla.mozilla.org/show_bug.cgi?id=418039
-*/
+/* hide the original "Copy Link" items */
 #context-copylink,menuitem[label="Copy"]:has(+#strip-on-share){display:none!important}
 
 /* keep  this item at the bottom
@@ -37,7 +34,6 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
 /* "Always Open Similar Files" in the download panel */
 .downloadAlwaysOpenSimilarFilesMenuItem,
 /* page context menu */
-#frame menuseparator,
 #context-navigation,#context-sep-navigation,
 #context-openlinkintab,#context-openlink,#context-openlinkprivate,
 #context-savepage,
@@ -45,6 +41,7 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
 #context-searchselect,
 #frame-sep,
 /* frame context menu */
+#frame menuseparator,
 #context-openframe,
 #context-bookmarkframe,#context-saveframe,
 #context-printframe,
