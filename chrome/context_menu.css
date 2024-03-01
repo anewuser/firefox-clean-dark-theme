@@ -12,7 +12,7 @@ main menu fix */
 
 /* keep  this item at the bottom
 https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
-#contentAreaContextMenu menuitem[label="Open in Temp Container"]{order:99!important;}
+#contentAreaContextMenu menuitem[label^="Open in Temp Container"]{order:99!important;}
 
 /* main menu */
 #appMenu-multiView vbox>toolbarseparator,
