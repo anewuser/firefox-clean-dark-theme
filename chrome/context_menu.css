@@ -58,6 +58,6 @@ menuitem[label="Copy Markdown link"],
 /* https://addons.mozilla.org/addon/order-tabs-by-domain/ */
 menu[label="Group Tabs to Window"],menuitem[label="Group Tabs to Window"],
 /* https://addons.mozilla.org/addon/open-in-temp-container/ */
-#tabContextMenu menuitem[label^="Open in Temp Container"], #contentAreaContextMenu menuitem[label="View Page Source"]:not([hidden="true"])~menuitem[label^="Open in Temp Container"]{
+#tabContextMenu menuitem[label^="Open in Temp Container"], #contentAreaContextMenu menuitem[label="Copy"]:not([hidden="true"])~menuitem[label^="Open in Temp Container"]{
 	display:none!important;
 }
