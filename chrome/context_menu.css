@@ -25,7 +25,7 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
 #tabContextMenu>menuseparator,
 #context_openANewTab,#context_reloadTab,#context_toggleMuteTab,
 #context_bookmarkTab,#context_moveTabOptions,.share-tab-url-item,#context_selectAllTabs,
-#context_closeTab,#context_closeTabOptions[disabled="true"],#context_closeTabsToTheStart,#closeTabOptions menuitem[disabled="true"],#context_undoCloseTab,
+#context_closeTab,#context_closeDuplicateTabs[disabled],#context_closeTabOptions[disabled],#context_closeTabsToTheStart,#closeTabOptions menuitem[disabled],#context_undoCloseTab,
 /* tabs toolbar */
 #toolbar-context-openANewTab,#toolbarNavigatorItemsMenuSeparator,
 #toolbar-context-reloadSelectedTab,#toolbar-context-bookmarkSelectedTab,#toolbar-context-selectAllTabs,#toolbar-context-undoCloseTab,#toolbarItemsMenuSeparator,
@@ -54,8 +54,6 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
 /* textboxes */
 .textbox-contextmenu menuseparator,#toolbox-menu menuseparator,
 menuitem[label="Undo"],menuitem[label="Redo"],#context-sep-redo,menuitem[label="Delete"],menuitem[label="Select All"],
-/* https://addons.mozilla.org/addon/copy-markdown-link/ */
-menuitem[label="Copy Markdown link"],
 /* https://addons.mozilla.org/addon/order-tabs-by-domain/ */
 menu[label="Group Tabs to Window"],menuitem[label="Group Tabs to Window"],
 /* https://addons.mozilla.org/addon/open-in-temp-container/ */
