@@ -7,12 +7,12 @@
 /* bookmark popup thumbnail */ 
 #editBookmarkPanelFaviconContainer,#editBookmarkPanelImage,#editBookmarkSeparator,
 /* "Search with" or "Visit" */
-.urlbarView-row:first-of-type,
+.urlbarView-row:first-of-type:has(.urlbarView-title-separator),
 /* result menu */
 .urlbarView-button{display:none!important}
 
 /* old loading icon */ 
-.tab-throbber[busy]{background-image:url(chrome://global/skin/icons/loading.png)!important}
+.tab-throbber[busy]{background-image:url(resource://gre/chrome/toolkit/skin/classic/global/icons/loading.svg)!important}
 .tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
 
 /* proper tabs */
