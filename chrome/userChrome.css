@@ -11,9 +11,11 @@
 /* result menu */
 .urlbarView-button{display:none!important}
 
-/* old loading icon */ 
+@media(prefers-reduced-motion){
+/* old loading icon */
 .tab-throbber[busy]{background-image:url(resource://gre/chrome/toolkit/skin/classic/global/icons/loading.svg)!important}
 .tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
+}
 
 /* proper tabs */
 .tabbrowser-tab{padding-inline:0!important}
