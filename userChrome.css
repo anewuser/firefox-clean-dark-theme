@@ -1,0 +1,32 @@
+@import 'context_menu.css';
+@import 'extensions_button.css';
+
+.tab-close-button,
+/* "List all tabs" button */ 
+#alltabs-button,
+/* bookmark popup thumbnail */ 
+#editBookmarkPanelFaviconContainer,#editBookmarkPanelImage,#editBookmarkSeparator,
+/* "Search with" or "Visit" */
+.urlbarView-row:first-of-type:has(.urlbarView-title-separator),
+/* result menu */
+.urlbarView-button{display:none!important}
+
+@media(prefers-reduced-motion){
+/* old loading icon */
+.tab-throbber[busy]{background-image:url(loading.svg)!important}
+.tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
+}
+
+/* proper tabs */
+.tabbrowser-tab{padding-inline:0!important}
+.tab-background{border-radius: 1px 1px 0 0 !important;margin-top:0!important;margin-bottom:0!important}
+
+/* highlight the top of active tabs */
+.tab-background:is([selected],[multiselected]){box-shadow:inset 0 2px #0a84ff!important}
+
+/* container indicators at the bottom */
+.tabbrowser-tab[usercontextid] .tab-context-line{margin-top:calc(var(--tab-min-height) - 1px)!important}
+
+/* tab dividers/separators */
+.tabbrowser-tab:not([selected],[multiselected]) + .tabbrowser-tab:not([selected],[multiselected]) .tab-background:after{border-left:1px solid #444445;height:100%;position:absolute}
+.tab-background:after{content:"";left:0}
