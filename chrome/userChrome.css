@@ -13,7 +13,7 @@
 
 @media(prefers-reduced-motion){
 /* old loading icon */
-.tab-throbber[busy]{background-image:url(resource://gre/chrome/toolkit/skin/classic/global/icons/loading.svg)!important}
+.tab-throbber[busy]{background-image:url(loading.svg)!important}
 .tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
 }
 
