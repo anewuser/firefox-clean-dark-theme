@@ -11,8 +11,12 @@
 /* result menu */
 .urlbarView-button{display:none!important}
 
-@media(prefers-reduced-motion){
+/* https://connect.mozilla.org/t5/ideas/mute-icon/idi-p/74429 */
+.tab-icon-overlay{border:unset!important;scale:1.5}
+.tab-icon-overlay[muted]{opacity:0.4}
+
 /* old loading icon */
+@media(prefers-reduced-motion){
 .tab-throbber[busy]{background-image:url(loading.svg)!important}
 .tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
 }
