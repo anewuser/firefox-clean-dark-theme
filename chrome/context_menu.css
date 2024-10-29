@@ -7,10 +7,13 @@ main menu fix */
 /* truncate "Copy Link Without Tracking" to "Copy Link" */
 #context-stripOnShareLink label[crop]:before{max-width: 9ch;text-overflow:clip!important;}
 #strip-on-share label[crop]:before{max-width: 5ch;text-overflow:clip!important;}
-/* hide the original "Copy Link" items */
-#context-copylink,menuitem[label="Copy"]:has(+#strip-on-share){display:none!important}
+/* hide disabled "Copy Link Without Tracking" items */
+#context-stripOnShareLink[disabled="true"],#strip-on-share[disabled="true"],
+/* hide "Copy Link" when "Copy Link Without Tracking" is enabled */
+#context-copylink:not(:has( + #context-stripOnShareLink[disabled="true"] )),
+menuitem[label="Copy"]:not(:has( + #strip-on-share[disabled="true"] )){display:none!important}
 
-/* keep  this item at the bottom
+/* keep this extension at the bottom
 https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
 #contentAreaContextMenu menuitem[label^="Open in Temp Container"]{order:99!important;}
 
