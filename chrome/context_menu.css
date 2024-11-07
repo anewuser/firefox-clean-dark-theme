@@ -2,7 +2,7 @@
 	uncluttered context menu 
 
 main menu fix */
-#appmenu-moreTools{max-height:unset!important;}
+.PanelUI-subView{max-height:unset!important;}
 
 /* truncate "Copy Link Without Tracking" to "Copy Link" */
 #context-stripOnShareLink label[crop]:before{max-width: 9ch;text-overflow:clip!important;}
