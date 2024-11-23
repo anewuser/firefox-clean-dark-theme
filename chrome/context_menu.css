@@ -10,8 +10,8 @@ main menu fix */
 /* hide disabled "Copy Link Without Tracking" items */
 #context-stripOnShareLink[disabled="true"],#strip-on-share[disabled="true"],
 /* hide "Copy Link" when "Copy Link Without Tracking" is enabled */
-#context-copylink:not(:has( + #context-stripOnShareLink[disabled="true"] )),
-menuitem[label="Copy"]:not(:has( + #strip-on-share[disabled="true"] )){display:none!important}
+#context-copylink:has( + #context-stripOnShareLink:not([disabled="true"]) ),
+menuitem[label="Copy"]:has( + #strip-on-share:not([disabled="true"]) ){display:none!important}
 
 /* keep this extension at the bottom
 https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */

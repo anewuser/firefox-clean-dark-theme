@@ -12,7 +12,7 @@
 .urlbarView-button{display:none!important}
 
 /* https://connect.mozilla.org/t5/ideas/mute-icon/idi-p/74429 */
-.tab-icon-overlay{border:unset!important;scale:1.5}
+.tab-icon-overlay{background-color:#E82E00!important;border:unset!important;scale:1.2}
 .tab-icon-overlay[muted]{opacity:0.4}
 
 /* old loading icon */
