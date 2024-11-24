@@ -2,8 +2,6 @@
 @import 'extensions_button.css';
 
 .tab-close-button,
-/* "List all tabs" button */ 
-#alltabs-button,
 /* bookmark popup thumbnail */ 
 #editBookmarkPanelFaviconContainer,#editBookmarkPanelImage,#editBookmarkSeparator,
 /* "Search with" or "Visit" */
