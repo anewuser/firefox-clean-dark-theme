@@ -15,7 +15,7 @@
 
 /* old loading icon */
 @media(prefers-reduced-motion){
-.tab-throbber[busy]{background-image:url(loading.svg)!important}
+.tab-throbber[busy]{background-image:url(loading.png)!important;}
 .tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
 }
 
