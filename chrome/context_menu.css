@@ -4,12 +4,14 @@
 main menu fix */
 .PanelUI-subView{max-height:unset!important;}
 
-/* truncate "Copy Link Without Tracking" to "Copy Link" */
-#context-stripOnShareLink label[crop]:before{max-width: 9ch;text-overflow:clip!important;}
-#strip-on-share label[crop]:before{max-width: 5ch;text-overflow:clip!important;}
-/* hide disabled "Copy Link Without Tracking" items */
+/* truncate "Copy Clean Link" */
+#strip-on-share label[crop],#context-stripOnShareLink label[crop]{color:transparent;position:relative}
+#strip-on-share label[crop]::after{color:#fff;content:'Copy';position:absolute}
+#context-stripOnShareLink label[crop]::after{color:#fff;content:'Copy Link';position:absolute}
+
+/* hide disabled "Copy Clean Link" items */
 #context-stripOnShareLink[disabled="true"],#strip-on-share[disabled="true"],
-/* hide "Copy Link" when "Copy Link Without Tracking" is enabled */
+/* hide "Copy Link" when "Copy Clean Link" is enabled */
 #context-copylink:has( + #context-stripOnShareLink:not([disabled="true"]) ),
 menuitem[label="Copy"]:has( + #strip-on-share:not([disabled="true"]) ){display:none!important}
 

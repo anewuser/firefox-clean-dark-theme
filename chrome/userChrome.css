@@ -19,6 +19,8 @@
 .tab-throbber[busy]:not([progress]){filter:grayscale(100%)}
 }
 
+@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+
 /* proper tabs */
 :root{--tab-block-margin:0!important}
 .tabbrowser-tab{padding-inline:0!important}
@@ -33,3 +35,5 @@
 /* tab dividers/separators */
 .tabbrowser-tab:not([selected],[multiselected]) + .tabbrowser-tab:not([selected],[multiselected]) .tab-background:after{border-left:1px solid #444445;height:100%;position:absolute}
 .tab-background:after{content:"";left:0}
+
+}
