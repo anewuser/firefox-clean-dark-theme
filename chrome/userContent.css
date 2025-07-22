@@ -1,39 +1,47 @@
+/* New Tab page */
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing){
+.logo-and-wordmark-wrapper {
+  display: none !important;
+}
+}
+
 /* Compact about:addons */
-@-moz-document url(about:addons) {
-  :root {
-    --addon-icon-size: 20px !important;
-  }
-  .addon-description {
-    display: none !important;
-  }
+@-moz-document url(about:addons){
+:root {
+  --addon-icon-size: 20px !important;
+}
+
+.addon-description {
+  display: none !important;
+}
 }
 
 /* Library in a tab */
-@-moz-document url(chrome://browser/content/places/places.xhtml) {
-  tree {
-    font: normal 540 14px "Segoe UI", sans-serif !important;
-  }
+@-moz-document url(chrome://browser/content/places/places.xhtml){
+tree {
+  font: normal 540 14px "Segoe UI", sans-serif !important;
+}
 
-  /* Removes "Open..." options from the context menu */
-  menuitem[label*="Open"],
-  menuseparator[id*="placesContext_open"] {
-    display: none !important;
-  }
+/* Removes "Open..." options from the context menu */
+menuitem[label*="Open"],
+menuseparator[id*="placesContext_open"] {
+  display: none !important;
+}
 
-  /* Colors */
-  :root {
-    --organizer-color: #cccccc !important;
-    --organizer-selected-color: #000000 !important;
-    --organizer-deemphasized-color: rgb(191, 191, 201) !important;
-    --organizer-toolbar-background: rgb(31, 35, 42) !important;
-    --organizer-pane-background: rgb(31, 35, 42) !important;
-    --organizer-content-background: rgb(37, 42, 51) !important;
-    --organizer-hover-background: rgba(136, 136, 139, 0.067) !important;
-    --organizer-selected-background: #83bafc !important;
-    --organizer-outline-color: rgb(0, 221, 255) !important;
-    --organizer-border-color: rgba(249, 249, 250, 0.1) !important;
-    --organizer-toolbar-field-background: rgb(28, 27, 34) !important;
-    --organizer-toolbar-field-background-focused: rgb(66, 65, 77) !important;
-    scrollbar-color: rgba(249, 249, 250, 0.4) rgba(20, 20, 25, 0.3) !important;
-  }
+/* Colors */
+:root {
+  --organizer-color: #cccccc !important;
+  --organizer-selected-color: #000000 !important;
+  --organizer-deemphasized-color: rgb(191, 191, 201) !important;
+  --organizer-toolbar-background: rgb(31, 35, 42) !important;
+  --organizer-pane-background: rgb(31, 35, 42) !important;
+  --organizer-content-background: rgb(37, 42, 51) !important;
+  --organizer-hover-background: rgba(136, 136, 139, 0.067) !important;
+  --organizer-selected-background: #83bafc !important;
+  --organizer-outline-color: rgb(0, 221, 255) !important;
+  --organizer-border-color: rgba(249, 249, 250, 0.1) !important;
+  --organizer-toolbar-field-background: rgb(28, 27, 34) !important;
+  --organizer-toolbar-field-background-focused: rgb(66, 65, 77) !important;
+  scrollbar-color: rgba(249, 249, 250, 0.4) rgba(20, 20, 25, 0.3) !important;
+}
 }
