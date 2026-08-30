@@ -9,7 +9,7 @@ You can customize the library colors in the `userContent.css` file.
 
 ## Installation
 * [Install the color theme](https://addons.mozilla.org/addon/old-dark-theme/)
-* Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
+* Go to `about:config` and set `browser.nova.enabled` and `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
 * Open `about:support` to find your profile folder
 * Create a subfolder called `chrome`
 * Download the `.css` files to it
@@ -19,9 +19,7 @@ Some of my other `about:config` settings:
 
 | preference      | value |
 | ----------- | ----------- |
-| browser.compactmode.show   | true |
 | browser.menu.showViewImageInfo   | true |
 | browser.uidensity | 1 |
 | browser.urlbar.trimURLs  | false |
-| extensions.pocket.enabled   | false |
 | extensions.screenshots.disabled   | true |
