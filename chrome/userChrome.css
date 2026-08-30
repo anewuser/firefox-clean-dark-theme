@@ -1,15 +1,29 @@
 /* --------------------------------------------
+        general "Nova" redesign fixes
+-------------------------------------------- */
+.browserContainer, .chrome-block {
+    border: 0px !important;
+}
+
+/* form autocomplete popup */
+.row-item img[src="chrome://browser/skin/history.svg"] {
+    display: none !important;
+}
+
+/* --------------------------------------------
         proper horizontal tabs
 -------------------------------------------- */
 @media not -moz-pref("sidebar.verticalTabs") {
-    :root { --tab-block-margin: 0 !important; }
+    :root { --tab-margin-block: 0 !important; --tab-min-height: 32px !important; }
+    
     tab {
         /* tab shape */
         &.tabbrowser-tab { padding-inline: 0 !important; }
-        .tab-background { border-radius: 0 !important; margin-block: 0 !important; }
+        .tab-background { border-radius: 0 !important; }
 
         /* highlight the top of active tabs; container tabs will overwrite the color */
-        &[selected] .tab-context-line, &[selected][usercontextid] .tab-context-line { background-color: #0a84ff; height: 3px !important; margin: 0 !important; }
+        &[selected] .tab-context-line, &[selected][usercontextid] .tab-context-line { background-color: #0a84ff; height: 3px !important; margin: 0 !important; position: absolute !important; left: 0 !important; right: 0 !important; }
+        &[selected][usercontextid] .tab-context-line { border-radius: 0 !important; height: 9px !important; }
 
         /* container indicators at the bottom */
         &[usercontextid] .tab-background { border-bottom: 1px dotted var(--identity-tab-color) !important; }
@@ -35,19 +49,27 @@
         address bar
 -------------------------------------------- */
 .urlbarView {
-    
-    /* "Visit" or "Search with" */
-    .urlbarView-row {
-        &[type="autofill_origin"], /*&[type="search"],*/ &:first-child:has(.urlbarView-title-separator) {
-            display: none !important;
-        }
-    }
-
+  
     /* hide when empty */
-    &:has(#urlbar-results:empty),
+    &:has(.urlbarView-row:only-child .urlbarView-title-separator),
     /* result menu next to suggestions */
     .urlbarView-button {
         display: none !important;
+    }    
+
+    .urlbarView-row {
+      
+        /* "Visit" or "Search with" */
+        &[type="autofill_origin"], /*&[type="search"],*/ &:first-child:has(.urlbarView-title-separator), &:has(span[data-l10n-id$="search-w-engine"]),
+        /* icon over history entries */
+        &[type$="history"] .urlbarView-type-icon {
+            display: none !important;
+        }
+      
+        &[type$="history"] .urlbarView-favicon {
+            mask-image: none !important;
+        }
+      
     }
 
 }
@@ -84,13 +106,14 @@
 .PanelUI-subView { max-height: unset !important; }
 
 /* truncate "Copy Clean Link" */
-#strip-on-share label[crop], #context-stripOnShareLink label[crop] { color: transparent; position: relative; }
+#strip-on-share label[crop], #context-stripOnShareLink label[crop]::before { content: '​' }
 #strip-on-share label[crop]::after { color: #fff; content: 'Copy'; position: absolute; }
 #context-stripOnShareLink label[crop]::after { color: #fff; content: 'Copy Link'; position: absolute; }
 
 /* hide disabled "Copy Clean Link" items */
-#context-stripOnShareLink[disabled="true"], #strip-on-share[disabled="true"],
+#context-copy-clean-link-to-highlight[disabled="true"], #context-stripOnShareLink[disabled="true"], #strip-on-share[disabled="true"],
 /* hide "Copy Link" when "Copy Clean Link" is enabled */
+#context-copy-link-to-highlight:has(+ #context-copy-clean-link-to-highlight:not([disabled="true"])),
 #context-copylink:has(+ #context-stripOnShareLink:not([disabled="true"])),
 menuitem[label="Copy"]:has(+ #strip-on-share:not([disabled="true"])) {
     display: none !important;
@@ -98,10 +121,11 @@ menuitem[label="Copy"]:has(+ #strip-on-share:not([disabled="true"])) {
 
 /* keep this extension at the bottom
 https://bugzilla.mozilla.org/show_bug.cgi?id=1370735 */
-#contentAreaContextMenu menuitem[label^="Open in"] { order: 99 !important; }
+#contentAreaContextMenu menuitem[label^="Open in private"] { order: 99 !important; }
 
 /* main menu */
-#appMenu-multiView vbox > toolbarseparator,
+#appMenu-multiView vbox > toolbarseparator, 
+#appMenu-profiles-button,
 #appMenu-new-tab-button2, #appMenu-new-window-button2, #appMenu-new-private-window-button2,
 #appMenu-bookmarks-button, #appMenu-history-button, #appMenu-downloads-button, #appMenu-passwords-button,
 #appMenu-print-button2, #appMenu-save-file-button2, #appMenu-find-button2, #appMenu-zoom-controls,
