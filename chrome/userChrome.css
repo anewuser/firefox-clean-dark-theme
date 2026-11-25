@@ -23,7 +23,7 @@
     tab {
         /* tab shape */
         &.tabbrowser-tab { padding-inline: 0 !important; }
-        .tab-background { border-radius: 0 !important; }
+        .tab-background { border-radius: 0 !important; outline: none !important; }
 
         /* highlight the top of active tabs */
         .tab-context-line { background: transparent !important; }
